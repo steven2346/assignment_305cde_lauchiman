@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HONG KONG AIDS FOUNDATION </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script type="text/javascript" src="js/jquery.core.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrap/3.3.7/js/bootstrap.min.js">
+
+<!--login-->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+</head>
+
+
+<body>
+
+<div id="wrap">
+<div class="top_corner"></div>
+<div id="main_container">
+
+  <div id="header">
+    <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" border="0" /></a></div>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Content Us</a></li>
+        <li><a class="current"  href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+       <div class="clear"></div> 
+  
+  
+  
+  <div class="center_content_pages">
+
+</div>
+<div class="clear"></div> 
+ </div>
+</div>
+
+
+
+<!-- Login-->
+      
+<div class="module form-module">
+  <div class="toggle"><i class="fa fa-times fa-pencil"></i>
+    <div class="tooltip">Sign In</div>
+  </div>
+  <div class="form">
+    <h2>Login to your account</h2>
+    <form>
+      <input type="text" id="log_user" name="log_ac" placeholder="Username"/>
+      <input type="password" id="log_pass" name="log_pw" placeholder="Password"/>
+     <!-- <button type="submit" value="Login" id="login">Login</button> -->
+      <input id="login" type="submit" class="button" value="Login">
+    </form>
+  </div>
+  <div class="form">
+    <h2>Create an account</h2>
+    <form>
+      <input type="text" id="user" name="ac" placeholder="Username"/>
+      <input type="password" id="pass" name="pw" placeholder="Password"/>
+      <input type="password" id="re_pass" name="re_pw" placeholder="Re-enter Password"/>
+      <input type="email" id="email" name="email" placeholder="Email Address"/>
+    <button id="sign_up"type="submit" value="Sign Up">Register</button>
+      
+     <!-- <input id="sign_up" type="submit" class="button" value="Sign Up">-->
+    </form>
+  </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+<script src="js/index.js"></script>
+ 
+    <div class="clear"></div>
+
+ <!--end-->
+ <div class="footer">
+	 <div class="left">
+         <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/hong-kong-19668"><img src="https://w.bookcdn.com/weather/picture/26_19668_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=&anc_id=23139"  alt="booked.net"/></a><!-- weather widget end -->
+     
+      </div>
+      <div class="right">Copyright &copy; 2017, UNI AIDS CARE, All Rights Reserved</div>
+      <div class="clear"></div>
+    </div>
+
+
+
+</body>
+<script>
+	
+	$(function() {
+		$("#login").click(function(e){
+			//alert("D");
+			$(function(){
+				var user = {};
+				user.act = "login";
+				user.ac = $("input[name='log_ac']").val();
+				user.pw = $("input[name='log_pw']").val();
+			//	alert(user.ac);
+				$.ajax({
+					url: "http://steven_mongodb-poonsmkt376016.codeanyapp.com:5001/index.html",
+					type: "POST",
+					data: user,
+					success: function (result) {
+						alert(result);
+       			 console.log(result);
+        		if(result.status == 200){
+            		console.log("hope can see here");
+        			}
+    			},
+    			error: function(result){
+        			console.log(result);
+    				}
+				});
+				return false;
+			});
+		});
+	
+		$("#sign_up").click(function(e){
+      alert('hello man');
+			var user = {};
+			user.act = "signup";
+			user.ac = $("input[name='ac']").val();
+			user.pw = $("input[name='pw']").val();
+			user.email = $("input[name='email']").val();
+			if(user.ac == ""||user.pw == ""||$("input[name='re_pw']").val()==""||user.email==""){
+				alert("Please input all infomration!");
+			}else if ($("input[name='re_pw']").val() != user.pw){
+				alert("Please input same password at repeat password!");
+			}else {
+				$.ajax( {
+					url: "http://steven_mongodb-poonsmkt376016.codeanyapp.com:5001/index.html",
+					type: "POST",
+					data: user,
+					datatype: "json",
+					success: function (result) {
+						alert(result);
+       			 console.log(result);
+        		if(result.status == 200){
+            		console.log("hope can see here");
+        			}
+    			},
+    			error: function(result){
+        			console.log(result);
+    				}
+				});
+			}
+			return false;
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>HONG KONG AIDS FOUNDATION </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script type="text/javascript" src="js/jquery.core.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.scripts.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
+</head>
+<body>
+<div id="wrap">
+  <div class="top_corner"></div>
+  <div id="main_container">
+    <div id="header">
+      <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" border="0" /></a></div>
+      <div id="menu">
+<ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="current" href="about.html">About us</a></li>
+          <li><a href="contact.html">Content Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    
+      <div class="center_content_pages">
+ 
+    <div class="container table-width">
+        <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Tel</th>
+          </tr>
+          </thead></tbody>
+      </table> 
+                
+<ul class="list">
+  <li id="SSS">Chai Wan Social Hygiene Clinic	</li>
+  <li id="donuts">Fanling Integrated Treatment Centre (Social Hygiene Service)	</li>
+  <li id="cupcakes">Tuen Mun Social Hygiene Clinic	</li>
+  <li id="icecream">Wan Chai Female Social Hygiene Clinic		</li>
+  <li id="cookies">Wan Chai Male Social Hygiene Clinic	</li>
+  <li id="chocolate">Yau Ma Tei Male Social Hygiene Clinic		</li>
+  <li id="ABC">Yung Fung Shee Social Hygiene Clinic		</li>
+</ul>
+          
+      </div>
+      
+
+      <script>
+	  $.getJSON("details.json",function(data){
+		  var items=[];
+		  $.each(data, function(key,val){
+			  items.push("<tr>");
+			  items.push("<td id=''"+key+"''>"+val.name+"</td>");
+			  items.push("<td id=''"+key+"''>"+val.address+"</td>");
+			  items.push("<td id=''"+key+"''>"+val.tel+"</td>");
+			  items.push("</tr>");
+		  });
+		  $("<tbody/>",{html:items.join("")}).appendTo("table");
+		  });
+		  </script>
+      
+      
+    </div>
+
+
+</div>
+</div>
+       
+
+      
+      <div class="clear"></div>
+    </div>
+    
+    
+    
+    
+        <div class="footer">
+					
+					<div class="left">
+         <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/hong-kong-19668"><img src="https://w.bookcdn.com/weather/picture/26_19668_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=&anc_id=23139"  alt="booked.net"/></a><!-- weather widget end -->
+
+      </div>
+      <div class="right">Copyright &copy; 2017, UNI AIDS CARE, All Rights Reserved</div>
+      <div class="clear"></div>
+    </div>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+<script>
+var favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+// add class 'fav' to each favorite
+favorites.forEach(function(favorite) {
+  document.getElementById(favorite).className = 'fav';
+});
+// register click event listener
+document.querySelector('.list').addEventListener('click', function(e) {
+  var id = e.target.id,
+      item = e.target,
+      index = favorites.indexOf(id);
+  // return if target doesn't have an id (shouldn't happen)
+  if (!id) return;
+  // item is not favorite
+  if (index == -1) {
+    favorites.push(id);
+    item.className = 'fav';
+  // item is already favorite
+  } else {
+    favorites.splice(index, 1);
+    item.className = '';
+  }
+  // store array in local storage
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+});
+
+</script>
+
+<script>
+$(document).ready(function(){
+ $.getJSON("details.json",function(data){
+	 var employee_data='';
+	 $.each(data, function(key, value){
+		 employee_data += '<tr>';
+		 employee_data += '<td>'+value.clinic_name+'</td>';
+		 employee_data += '<td>'+value.clinic_address+'</td>';
+		 employee_data += '<td>'+value.clinic_tel+'</td>';
+
+		 employee_data += '</tr>';
+ });
+ 
+ $('#employee_table').append(employee_data);
+ });
+});
+</script>
+

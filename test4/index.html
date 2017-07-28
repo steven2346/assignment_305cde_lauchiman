@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>HONG KONG AIDS FOUNDATION </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script type="text/javascript" src="js/jquery.core.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.scripts.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <div class="top_corner"></div>
+  <div id="main_container">
+    <div id="header">
+      
+     
+                    <!-- data-count is where the count will be stored from server -->
+<div id="stickySocial">
+  <div class="stickySocialSocial">    
+      <a data-count="11" id="stickyBtn" class="fbShare ssPopup" target="_blank" href="https://www.facebook.com/sharer/sharer.php?s=100&p[title]=&p[url]=&p[images][0]=">
+        <span class="button">SHARE</span>
+        <span class="count">0</span>
+      </a>			
+  </div>
+</div>
+      
+      <script>
+      $('#stickySocial').find('#stickyBtn').each(function(){
+  var $el = $(this);
+  var ssCount = $el.data("count");
+  var ssClass = $el.attr("class").split(' ')[0];
+  $('.'+ssClass+' .count').html(ssCount);
+});
+
+/*$('#stickySocial').find('#stickyBtn').each(function(){
+  var $e = $(this),
+      shareCount = 0,
+      newShareCount = $e.data().count;
+  
+  $({shareCount:shareCount}).animate({shareCount:newShareCount}, {
+    duration: 2500,
+    easing:'swing', // can be anything
+    step: function() {
+            $('.count').text(Math.ceil(this.shareCount));
+          }
+  }); 
+});
+
+$({shareCount: 0}).animate({shareCount: 100}, {
+  duration: 2500,
+  easing:'swing', // can be anything
+  step: function() { // called on every step
+    // Update the element's text with rounded-up value:
+    $('.tweet .count').text(Math.ceil(this.shareCount));
+  }
+});
+$({shareCount: 0}).animate({shareCount: 100}, {
+  duration: 2500,
+  easing:'swing', // can be anything
+  step: function() { // called on every step
+    // Update the element's text with rounded-up value:
+    $('.pinIt .count').text(Math.ceil(this.shareCount));
+  }
+});
+$({shareCount: 0}).animate({shareCount: 100}, {
+  duration: 2500,
+  easing:'swing', // can be anything
+  step: function() { // called on every step
+    // Update the element's text with rounded-up value:
+    $('.comment .count').text(Math.ceil(this.shareCount));
+  }
+});
+*/
+      </script>
+      
+      
+      <div id="logo"><a href="index.html"><img src="images/logo.gif" alt="" border="0" /></a></div>
+      <div id="menu">
+
+        <ul>
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Content Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="middle_banner">
+      <div class="featured_slider">
+        <div id="featured_border" class="jcarousel-container">
+          <div id="featured_wrapper" class="jcarousel-clip">
+            <ul id="featured_images" class="jcarousel-list">
+              <li><img src="images/slider_photo.jpg" width="965" height="280" alt="" /></li>
+              <li><img src="images/slider_photo2.jpg" width="965" height="280" alt="" /></li>
+            </ul>
+          </div>
+          <div id="featured_positioner_desc" class="jcarousel-container">
+            
+          </div>
+          <ul id="featured_buttons" class="clear_fix">
+            <li>1</li>
+            <li>2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="center_content">
+    
+          <div class="flex-video flex-video-widescreen mb-beta">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/49_cWR4-Inc" frameborder="0" allowfullscreen></iframe>
+</div>
+      
+   <div class="searchbar">
+   <p> You could use below search bar to search the further information about AIDS.</p>
+   <script>
+  (function() {
+    var cx = '007399999543732179874:nnuz1iy5kww';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search></div>
+
+
+      <div class="home_section_left"> <img src="images/icon1.gif" alt="" class="home_section_icon" border="0" />
+        <h2 class="home_title">What we do</h2>
+        <div class="home_section_thumb"> <img src="images/home_section_thumb1.jpg" alt="" border="0" /></div>
+        <p><span>No Discrimination</span><br />
+          We advocate that people who suffer from HIV should not be discriminated against and should give them equal rights. <br />  </p>
+
+        <div class="clear"></div>
+      </div>
+      
+      
+      <div class="home_section_left"> <img src="images/icon2.gif" alt="" class="home_section_icon" border="0" />
+        <h2 class="home_title">Who we are</h2>
+        <div class="home_section_thumb"> <img src="images/home_section_thumb2.jpg" alt="" border="0" /></div>
+        <p><span>Anonymous Volunteers</span><br />
+          We are 50 groups of volunteers of different nationalities <br />
+         </p>
+        <div class="clear"></div>
+      </div>
+      
+      
+      
+      <div class="home_section_left"> <img src="images/icon3.gif" alt="" class="home_section_icon" border="0" />
+        <h2 class="home_title">Special services</h2>
+
+        <div class="home_section_thumb"> <img src="images/home_section_thumb3.jpg" alt="" border="0" /></div>
+        <p><span>Inquire and Help</span><br />
+          We provide sex workers with the right knowledge of safe sex. Provide free virus testing and Counseling for patients. <br /> </p>
+        <div class="clear"></div>
+      </div>
+ </div>
+ 
+
+ 
+    <div class="footer">
+      <div class="left">
+         <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/hong-kong-19668"><img src="https://w.bookcdn.com/weather/picture/26_19668_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=2&domid=&anc_id=23139"  alt="booked.net"/></a><!-- weather widget end -->
+     
+      </div>
+      <div class="right">Copyright &copy; 2017, UNI AIDS CARE, All Rights Reserved</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

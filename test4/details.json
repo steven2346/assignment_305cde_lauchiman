@@ -1,0 +1,41 @@
+[
+	
+{ 
+"id":"01",
+"name": "Chai Wan Social Hygiene Clinic",
+"address": "West Wing, LG5 Specialist Out-patient Block, Pamela Youde Nethersole Eastern Hospital, 3 Lok Man Road, Chai Wan",
+"tel":"2595 7500"
+},
+	
+{ "id":"02","name": "Fanling Integrated Treatment Centre (Social Hygiene Service)","address":"6/F Fanling Health Centre, 2 Pik Fung Road, Fanling","tel":"2835 1761"},
+	
+	
+{ "id":"03","name": "Tuen Mun Social Hygiene Clinic","address":"5/F Tuen Mun Eye Centre, 4 Tuen Lee Street, Tuen Mun",
+"tel":"3511 1197"
+},
+	
+
+{ "id":"04",
+"name": "Wan Chai Female Social Hygiene Clinic","address": "7/F Tang Chi Ngong Specialist Clinic, 284 Queen's Road East, Wan Chai",
+"tel":"3103 2411"},
+	
+	
+{ "id":"05","name": "Wan Chai Male Social Hygiene Clinic","address":"6/F Tang Chi Ngong Specialist Clinic, 284 Queen's Road East, Wan Chai","tel":"3103 2400"
+},
+	
+
+{ "id":"06",
+"name": "Yau Ma Tei Female Social Hygiene Clinic","address": "3/F Yau Ma Tei Jockey Club Polyclinic, 145 Battery Street, Yau Ma Tei",
+"tel":"2245 9528"},
+	
+	
+{ "id":"07","name": "Yau Ma Tei Male Social Hygiene Clinic","address":"4/F Yau Ma Tei Jockey Club Polyclinic, 145 Battery Street, Yau Ma Tei","tel":"2359 4377"},
+	
+
+{ "id":"08",
+"name": "Yung Fung Shee Social Hygiene Clinic","address": "4/F Yung Fung Shee Memorial Centre, 79 Cha Kwo Ling Road, Kwun Tong",
+"tel":"2727 8315"}
+	
+	
+]	
+	
